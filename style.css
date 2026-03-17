@@ -977,6 +977,45 @@ img { max-width: 100%; display: block; }
 
 #certifications .container { position: relative; z-index: 1; }
 
+/* ===== SOCIAL LINKS ===== */
+.social-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    justify-content: flex-start;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.04);
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.social-icon:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(59,130,246,0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(59,130,246,0.25);
+}
+
+.contact-socials {
+    justify-content: center;
+    margin-top: 28px;
+}
+
 /* Floating particles — Contact section */
 .contact-section::before {
     content: '';
@@ -997,6 +1036,7 @@ img { max-width: 100%; display: block; }
     .hero .container { flex-direction: column; text-align: center; gap: 40px; }
     .hero-description { margin: 0 auto 32px; }
     .hero-actions { justify-content: center; }
+    .social-links { justify-content: center; }
     .hero-stats { justify-content: center; }
     .hero-image { width: 260px; height: 260px; }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
