@@ -178,6 +178,36 @@
         </div>
         <div class="ai-cards highlight-cards">
             <div class="ai-card reveal">
+                <img src="assets/sentryiq-banner.jpg" alt="SentryIQ concept: config change checked by Cisco IQ, AI reasoning and graph authority before NSO deploys or blocks it" loading="lazy" class="highlight-img">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                    <div class="card-icon" style="font-size: 2rem;">&#128737;</div>
+                    <div>
+                        <h3 style="margin: 0;">AIgnite FY27 Hackathon</h3>
+                        <div style="color: var(--accent); font-size: 0.85rem; font-weight: 600; margin-top: 4px;">Cisco &nbsp;·&nbsp; November 2026 &nbsp;·&nbsp; Submitted &nbsp;·&nbsp; Team ProactiveOps</div>
+                    </div>
+                </div>
+                <h4 style="color: var(--text-primary); margin-bottom: 8px;">&#128272; SentryIQ: AI-Powered Secure Config Change Guardian for Cisco NSO</h4>
+                <p style="margin-bottom: 12px;">An AI security gateway between network engineers and <strong>Cisco NSO</strong>. Before any config change reaches the network, an NSO pre-commit hook sends it to SentryIQ, which checks it against <strong>Cisco IQ</strong> security advisories, CVEs, hardening baselines, and device end-of-life status. Then it approves the change or blocks it.</p>
+                <ul class="talk-list">
+                    <li><strong>Cisco IQ analysis:</strong> builds a security profile for the target device, covering open CVEs, hardening violations, and lifecycle status.</li>
+                    <li><strong>AI reasoning:</strong> an LLM checks the config diff against that profile and returns an approve-or-block verdict that must cite a specific CVE or advisory.</li>
+                    <li><strong>Graph-bound authority:</strong> an AI verdict alone can&rsquo;t authorize a change. It goes through only if a task-relationship graph issues a signed, one-use permit, so a prompt-injected AI still can&rsquo;t push an unauthorized change.</li>
+                    <li><strong>Outcome:</strong> blocked changes trigger a Webex alert with the cited CVE and the fix, and every decision is written to an audit log.</li>
+                </ul>
+                <p style="margin-bottom: 12px;"><strong>My role:</strong> Lead engineer and NSO expert, owning the NSO pre-commit hook, Cisco IQ integration, the AI reasoning layer, and the FastAPI backend. Built with teammate Shreyash Sharma, who leads the graph-authority and AI-safety layer.</p>
+                <p style="margin-bottom: 16px;"><em>&ldquo;Standing guard between your engineers and your network.&rdquo;</em></p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Cisco NSO</span>
+                    <span class="skill-tag">Cisco IQ</span>
+                    <span class="skill-tag">LLM Reasoning</span>
+                    <span class="skill-tag">Prompt-Injection Defense</span>
+                    <span class="skill-tag">Graph-Based Authorization</span>
+                    <span class="skill-tag">JWT Permits</span>
+                    <span class="skill-tag">FastAPI</span>
+                    <span class="skill-tag">Webex Bot</span>
+                </div>
+            </div>
+            <div class="ai-card reveal">
                 <img src="assets/cx-lighthouse.jpg" alt="Dhiraj Bhasme presenting a lightning talk at Cisco CX Lighthouse" loading="lazy" class="highlight-img">
                 <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
                     <div class="card-icon" style="font-size: 2rem;">&#127908;</div>

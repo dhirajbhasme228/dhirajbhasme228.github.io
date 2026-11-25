@@ -457,6 +457,16 @@ img { max-width: 100%; display: block; }
 
 .highlight-cards { grid-template-columns: repeat(2, 1fr); align-items: start; }
 
+.talk-list {
+    padding-left: 20px;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.talk-list li { margin-bottom: 8px; }
+
 .talk-details {
     margin-bottom: 16px;
     border-top: 1px solid var(--border);
