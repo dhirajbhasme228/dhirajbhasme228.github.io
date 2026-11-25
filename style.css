@@ -455,7 +455,44 @@ img { max-width: 100%; display: block; }
     gap: 24px;
 }
 
-.highlight-cards { grid-template-columns: repeat(2, 1fr); }
+.highlight-cards { grid-template-columns: repeat(2, 1fr); align-items: start; }
+
+.talk-details {
+    margin-bottom: 16px;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+}
+
+.talk-details summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    list-style: none;
+}
+
+.talk-details summary::-webkit-details-marker { display: none; }
+.talk-details summary::before { content: "\25B8  "; }
+.talk-details[open] summary::before { content: "\25BE  "; }
+
+.talk-details p { margin: 14px 0 6px; }
+
+.talk-details ul,
+.talk-details ol {
+    padding-left: 20px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.talk-details li { margin-bottom: 8px; }
+
+.talk-details code {
+    background: rgba(59,130,246,0.1);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
 
 .highlight-img {
     width: 100%;

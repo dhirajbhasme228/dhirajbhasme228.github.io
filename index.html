@@ -187,9 +187,36 @@
                     </div>
                 </div>
                 <h4 style="color: var(--text-primary); margin-bottom: 8px;">&#129302; Elevating Network Automation with AI: An Intelligent Network Validator</h4>
-                <p style="margin-bottom: 12px;">Presented an AI-driven framework that turns initial and final state network validation into an intelligent, consistent, automated process, using <strong>LLMs</strong>, <strong>Retrieval-Augmented Generation (RAG)</strong>, and <strong>A2A micro-agents</strong>.</p>
-                <p style="margin-bottom: 12px;"><strong>Approach:</strong> A product mindset focused on scalability, reduced manual effort, standardized validation criteria, and AI reasoning built directly into operational workflows.</p>
-                <p style="margin-bottom: 16px;"><em>&ldquo;We don&rsquo;t just automate the commands&hellip; we automate the understanding.&rdquo;</em></p>
+                <p style="margin-bottom: 12px;">Presented an AI-driven validation engine that replaces manual precheck, postcheck, and compare work during change windows. Engineers send a plain-language message in <strong>Webex</strong>, and the system runs the checks, parses the outputs, compares the results, and replies with a clear summary, turning hours of manual work into seconds.</p>
+                <p style="margin-bottom: 12px;"><strong>The problem:</strong> Validation is the riskiest part of a change window. It means running the same commands device by device, following criteria that differ between teams and old MOP documents, and spotting differences by scrolling through raw CLI output.</p>
+                <p style="margin-bottom: 12px;"><em>&ldquo;We don&rsquo;t just automate the commands&hellip; we automate the understanding.&rdquo;</em></p>
+                <div class="skill-tags" style="margin-bottom: 16px;">
+                    <span class="skill-tag">LLM Intent Routing</span>
+                    <span class="skill-tag">RAG</span>
+                    <span class="skill-tag">A2A Micro-Agents</span>
+                    <span class="skill-tag">Genie / pyATS</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">FastAPI</span>
+                    <span class="skill-tag">Webex Bot</span>
+                </div>
+                <details class="talk-details">
+                    <summary>Read more: architecture and roadmap</summary>
+                    <p><strong>How it works</strong></p>
+                    <ul>
+                        <li><strong>Innovate:</strong> A Webex bot passes the engineer&rsquo;s message to an LLM intent router, which works out what they want: a precheck, a comparison, the validation criteria, or a summary.</li>
+                        <li><strong>Automate:</strong> Each capability runs as its own A2A micro-agent (precheck, postcheck, compare, RAG query), called through a lightweight <code>/invoke</code> interface. Agents can be added or replaced without touching the bot. Tasks that aren&rsquo;t agents yet go to the existing FastAPI backend, so nothing breaks during the migration.</li>
+                        <li><strong>Elevate:</strong> Commands are executed and parsed into structured data with Genie and pyATS, then checked against criteria retrieved from RAG. The LLM compares results by meaning rather than by brittle text diffs, so it can flag real anomalies.</li>
+                        <li><strong>Results:</strong> Run history, parsed outputs, and validation results are stored in MongoDB for traceability and auditing. Engineers receive Webex cards, file attachments, and links to the full results instead of raw logs.</li>
+                    </ul>
+                    <p><strong>Roadmap</strong></p>
+                    <ol>
+                        <li><strong>Planner Agent:</strong> sequences precheck, execution, postcheck, and comparison automatically.</li>
+                        <li><strong>MCP Agent Registry:</strong> agents register themselves and are discovered dynamically, with no hard-coded routing.</li>
+                        <li><strong>Automated MOP ingestion:</strong> commands, steps, and validation criteria are extracted from Word, PDF, or text MOPs and stored in RAG.</li>
+                        <li><strong>Real-time streaming validation:</strong> progress updates arrive in Webex as commands run.</li>
+                        <li><strong>Autonomous network validator:</strong> continuous drift checks, AI-based anomaly detection, and failure prediction.</li>
+                    </ol>
+                </details>
                 <a href="https://www.linkedin.com/feed/update/urn:li:activity:7400142588541829120/" target="_blank" style="font-weight: 600;">View on LinkedIn &#8599;</a>
             </div>
             <div class="ai-card reveal">
