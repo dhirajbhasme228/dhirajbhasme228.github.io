@@ -305,7 +305,7 @@ img { max-width: 100%; display: block; }
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    object-position: 68% 20%;
+    object-position: center;
     background: var(--bg-secondary);
     display: block;
 }
