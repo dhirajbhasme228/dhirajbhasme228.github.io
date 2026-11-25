@@ -455,7 +455,7 @@ img { max-width: 100%; display: block; }
     gap: 24px;
 }
 
-.highlight-cards { grid-template-columns: repeat(2, 1fr); align-items: start; }
+.highlight-cards { grid-template-columns: repeat(3, 1fr); align-items: start; }
 
 .talk-list {
     padding-left: 20px;
